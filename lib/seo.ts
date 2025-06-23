@@ -69,8 +69,8 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@wangaonly",
-      site: "@wangaonly",
+      creator: "@ItsWangaKE",
+      site: "@ItsWangaKE",
     },
     icons: {
       icon: "/favicon.ico",

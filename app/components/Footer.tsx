@@ -166,9 +166,7 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800/50 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-gray-400 text-sm flex items-center">
-            <span>© {new Date().getFullYear()} Evans Wanga. Crafted with</span>
-            <FaHeart className="text-red-500 mx-2 text-xs animate-pulse" />
-            <span>in Nairobi, Kenya</span>
+            <span>© {new Date().getFullYear()} Evans Wanga.</span>
           </div>
 
           <div className="flex space-x-6 text-sm text-gray-400">
@@ -187,7 +185,7 @@ function Footer() {
               <div className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
             </Link>
             <Link
-              href="/sitemap"
+              href="/sitemap.xml"
               className="hover:text-white transition-colors duration-300 relative group"
             >
               Sitemap
