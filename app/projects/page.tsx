@@ -4,26 +4,26 @@ import ProjectCard from '../components/ProjectCard';
 
 const projects = [
     { 
-        title: 'AFCH Church Website', 
-        link: '#', 
+        title: 'AMWC Church Website', 
+        link: 'https://agapemiracleworshipcenter-3cji24qll-wangaevans.vercel.app/', 
         banner: "/images/church.png", 
-        alt: "AFCH Church Website Screenshot",
+        alt: "AMWC Church Website Screenshot",
         description: "A modern church website built with responsive design and interactive features for community engagement.",
-        tech: ['React', 'Next.js', 'Tailwind CSS', 'Node.js'],
+        tech: ['Next.js', 'Tailwind CSS', 'DIRECTUS CMS'],
         category: 'Web Development'
     },
     { 
         title: 'My Blog', 
-        link: 'https://techhub-w4l2.vercel.app/', 
+        link: 'https://wangaevans-blog-wangaevans.vercel.app/', 
         banner: "/images/blog.png", 
         alt: "Tech Blog Screenshot",
-        description: "A full-featured blog platform with content management, user authentication, and SEO optimization.",
-        tech: ['React', 'MongoDB', 'Express', 'Vercel'],
+        description: "A full-featured blog platform with content management, and SEO optimization.",
+        tech: ['Next.js', 'MDX', 'Typescript', 'Tailwind CSS'],
         category: 'Full-Stack'
     },
     {
         title: 'E-Commerce Platform',
-        link: '#',
+        link: 'https://komas-mu.vercel.app/',
         banner: "/images/ecommerce.png",
         alt: "E-Commerce Platform Screenshot",
         description: "A complete e-commerce solution with payment integration, inventory management, and analytics dashboard.",
@@ -31,35 +31,36 @@ const projects = [
         category: 'Full-Stack'
     },
     {
-        title: 'Portfolio Dashboard',
-        link: '#',
-        banner: "/file.svg",
+        title: 'My Portfolio',
+        link: 'https://portfolio-smoky-five-81.vercel.app/',
+        banner: "/images/portfolio.png",
         alt: "Portfolio Dashboard Screenshot",
-        description: "An admin dashboard for managing portfolio content, projects, and client communications.",
-        tech: ['React', 'Chart.js', 'Firebase', 'Material-UI'],
+        description: "And YES, the site you are currently on!",
+        tech: ['Next.js', 'Nodemailer', 'Tailwind CSS'],
         category: 'Frontend'
     },
-    {
-        title: 'Mobile Banking App',
-        link: '#',
-        banner: "/images/banking.png",
-        alt: "Mobile Banking App Screenshot",
-        description: "A secure mobile banking application with biometric authentication and real-time transactions.",
-        tech: ['React Native', 'Node.js', 'MongoDB', 'JWT'],
-        category: 'Mobile'
-    },
-    {
-        title: 'AI Chat Assistant',
-        link: '#',
-        banner: "/images/ai-chat.png",
-        alt: "AI Chat Assistant Screenshot",
-        description: "An intelligent chatbot powered by AI for customer support and automated responses.",
-        tech: ['Python', 'OpenAI API', 'FastAPI', 'Docker'],
-        category: 'AI/ML'
-    }
+    // {
+    //     title: 'Mobile Banking App',
+    //     link: '#',
+    //     banner: "/images/banking.png",
+    //     alt: "Mobile Banking App Screenshot",
+    //     description: "A secure mobile banking application with biometric authentication and real-time transactions.",
+    //     tech: ['React Native', 'Node.js', 'MongoDB', 'JWT'],
+    //     category: 'Mobile'
+    // },
+    // {
+    //     title: 'AI Chat Assistant',
+    //     link: '#',
+    //     banner: "/images/ai-chat.png",
+    //     alt: "AI Chat Assistant Screenshot",
+    //     description: "An intelligent chatbot powered by AI for customer support and automated responses.",
+    //     tech: ['Python', 'OpenAI API', 'FastAPI', 'Docker'],
+    //     category: 'AI/ML'
+    // }
 ];
 
-const categories = ['All', 'Web Development', 'Full-Stack', 'Frontend', 'Mobile', 'AI/ML'];
+const categories = ['All', 'Web Development', 'Full-Stack', 'Frontend'];
+// const categories = ['All', 'Web Development', 'Full-Stack', 'Frontend', 'Mobile', 'AI/ML'];
 
 function Projects() {
     const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -80,7 +81,7 @@ function Projects() {
     };
 
     return (
-        <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white py-20 px-6 overflow-hidden">
+        <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white py-22 px-6 overflow-hidden">
             {/* Background Effects */}
             <div className="absolute inset-0">
                 <div className="absolute w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse" />
@@ -145,7 +146,7 @@ function Projects() {
                             key={index}
                             className="opacity-0 animate-fadeInUp"
                             style={{ 
-                                animationDelay: `${index * 150}ms`,
+                                animationDelay: `${index * 0}ms`,
                                 animationFillMode: 'forwards'
                             }}
                         >
@@ -175,7 +176,7 @@ function Projects() {
                             </a>
                             
                             <a 
-                                href="/resume.pdf" 
+                                href="/docs/resume.pdf" 
                                 className="px-8 py-4 border-2 border-gray-600 text-gray-300 font-bold rounded-xl transition-all duration-300 hover:border-blue-400 hover:text-white hover:bg-blue-500/10 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/30"
                             >
                                 View Resume

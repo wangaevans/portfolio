@@ -12,7 +12,7 @@ function Hero() {
     const [isVisible, setIsVisible] = useState(false);
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     
-    const avatar = "https://avatars.githubusercontent.com/u/85017101?v=4";
+    const avatar = "https://avatars.githubusercontent.com/u/85017101?s=400&u=f1bdb8eab747388827027db7b166ce89fdeff31e&v=4";
     const roles = ['Full-Stack Developer', 'Frontend Specialist', 'Backend Engineer', 'Problem Solver'];
 
     const getGreeting = (): string => {
@@ -133,11 +133,7 @@ function Hero() {
                         
                         {/* Description */}
                         <p className="text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed">
-                            I craft exceptional digital experiences by combining innovative 
-                            <span className="text-blue-400 font-semibold"> frontend designs </span>
-                            with robust 
-                            <span className="text-purple-400 font-semibold"> backend architectures</span>. 
-                            Let&apos;s build something amazing together.
+                         I create exceptional digital experiences by blending eye-catching <span className="text-blue-400 font-semibold">frontend design</span> with powerful <span className="text-purple-400 font-semibold">backend architecture</span>. Let’s team up and build something incredible.
                         </p>
 
                         {/* CTA Buttons */}
@@ -154,7 +150,7 @@ function Hero() {
                             </Link>
                             
                             <Link 
-                                href="/resume.pdf" 
+                                href="docs/resume.pdf" 
                                 className="group px-8 py-4 border-2 border-gray-600 text-gray-300 font-bold rounded-xl transition-all duration-300 hover:border-blue-400 hover:text-white hover:bg-blue-500/10 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/30"
                             >
                                 <span className="flex items-center justify-center">

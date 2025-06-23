@@ -109,7 +109,7 @@ function Footer() {
                                 <div className="p-2 rounded-lg bg-gradient-to-br from-gray-800/80 to-gray-900/80 border border-gray-700/50">
                                     <HiMail className="text-purple-400 text-sm" />
                                 </div>
-                                <span className="group-hover:text-white transition-colors duration-300">hello@evanswanga.dev</span>
+                                <span className="group-hover:text-white transition-colors duration-300">wangaevans84@gmail.com</span>
                             </div>
                             <div className="flex items-center space-x-3 group">
                                 <div className="p-2 rounded-lg bg-gradient-to-br from-gray-800/80 to-gray-900/80 border border-gray-700/50">
@@ -122,7 +122,7 @@ function Footer() {
                 </div>
 
                 {/* Newsletter Section */}
-                <div className="border-t border-gray-800/50 pt-12 mb-12">
+                {/* <div className="border-t border-gray-800/50 pt-12 mb-12">
                     <div className="text-center max-w-lg mx-auto">
                         <h4 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                             Let&apos;s Build Something Amazing Together
@@ -141,7 +141,7 @@ function Footer() {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-800/50 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">

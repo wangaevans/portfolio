@@ -57,7 +57,7 @@ function Contact() {
     };
 
     return (
-        <div id="contact" className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 py-16 px-4">
+        <div id="contact" className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 py-22 px-4">
             <ToastContainer 
                 position="top-right"
                 autoClose={3000}
@@ -87,7 +87,7 @@ function Contact() {
                 {/* Contact Form */}
                 <div className="relative">
                     {/* Background Elements */}
-                    <div className="absolute inset-0 bg-gray-800/50 rounded-3xl shadow-2xl transform rotate-1 backdrop-blur-sm"></div>
+                    <div className="absolute inset-0 bg-blue-950 rounded-3xl shadow-2xl transform rotate-1 backdrop-blur-sm"></div>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl"></div>
                     
                     <form
