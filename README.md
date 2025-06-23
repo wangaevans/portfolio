@@ -30,7 +30,7 @@ A modern, responsive portfolio website built with Next.js and Tailwind CSS, feat
 1. Clone the repository:
 
    ```bash
-   git clone [your-repo-url]
+   git clone git@github.com:wangaevans/portfolio.git
    ```
 
 2. Install dependencies:
