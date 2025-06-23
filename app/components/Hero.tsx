@@ -96,7 +96,8 @@ function Hero() {
             {/* Main Content */}
             <div className={`relative z-10 max-w-7xl mx-auto px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                {/* Desktop Layout (lg and above) - Exactly as original */}
+                <div className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     
                     {/* Left Column - Main Content */}
                     <div className="text-center lg:text-left order-2 lg:order-1">
@@ -133,7 +134,7 @@ function Hero() {
                         
                         {/* Description */}
                         <p className="text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed">
-                         I create exceptional digital experiences by blending eye-catching <span className="text-blue-400 font-semibold">frontend design</span> with powerful <span className="text-purple-400 font-semibold">backend architecture</span>. Let’s team up and build something incredible.
+                         I create exceptional digital experiences by blending eye-catching <span className="text-blue-400 font-semibold">frontend design</span> with powerful <span className="text-purple-400 font-semibold">backend architecture</span>. Let's team up and build something incredible.
                         </p>
 
                         {/* CTA Buttons */}
@@ -161,7 +162,7 @@ function Hero() {
                         </div>
 
                         {/* Social Links */}
-                        <div className="flex justify-center lg:justify-start space-x-6">
+                        <div className="flex justify-center lg:justify-start space-x-6 mb-12">
                             <Link 
                                 href="https://github.com/wangaevans"
                                 className="group p-3 rounded-full bg-gray-800/50 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
@@ -207,11 +208,11 @@ function Hero() {
                         </div>
 
                         {/* Skills Grid */}
-                        <div className="w-full max-w-md">
-                            <h3 className="text-center text-xl font-bold text-white mb-6">
+                        <div className="w-full max-w-md py-6">
+                            <h3 className="text-center text-xl py-6 font-bold text-white">
                                 Tech Stack
                             </h3>
-                            <div className="grid grid-cols-3 gap-3">
+                            <div className="grid grid-cols-3 gap-3 ">
                                 {config.skills.slice(0, 9).map((skill, index) => (
                                     <div 
                                         key={index}
@@ -231,8 +232,138 @@ function Hero() {
                     </div>
                 </div>
 
+                {/* Mobile/Tablet Layout (below lg) - Optimized for smaller screens */}
+                <div className="lg:hidden flex flex-col items-center text-center space-y-6 sm:space-y-8">
+                    
+                    {/* Avatar First on Mobile */}
+                    <div className="relative group">
+                        <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-lg opacity-60 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+                        <div className="relative">
+                            <Image 
+                                src={avatar} 
+                                width={120} 
+                                height={120} 
+                                alt="Evans Wanga" 
+                                className="object-cover rounded-full border-3 border-white/20 shadow-2xl transition-transform duration-300 group-hover:scale-105 w-28 h-28 sm:w-32 sm:h-32" 
+                            />
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/5 to-white/10"></div>
+                            
+                            {/* Status Indicator */}
+                            <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full border-3 border-gray-900 animate-pulse">
+                                <div className="w-full h-full bg-green-400 rounded-full animate-ping"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Greeting Badge */}
+                    <div className="inline-block">
+                        <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 backdrop-blur-sm">
+                            <span className="text-lg sm:text-2xl">👋</span>
+                            <span className="text-blue-400 font-medium text-xs sm:text-sm tracking-wider">
+                                {greeting}, Welcome!
+                            </span>
+                        </div>
+                    </div>
+                    
+                    {/* Name & Title */}
+                    <div>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 leading-tight">
+                            <span className="block text-white mb-2">
+                                I&apos;m <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Evans</span>
+                            </span>
+                        </h1>
+                        
+                        {/* Animated Role */}
+                        <div className="mb-4 h-8 sm:h-10 flex items-center justify-center">
+                            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-gray-300 to-gray-100 bg-clip-text text-transparent">
+                                {roles[currentWordIndex]}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    {/* Location */}
+                    <div className="flex items-center justify-center gap-2">
+                        <HiLocationMarker className="text-blue-400 text-base sm:text-lg" />
+                        <span className="text-gray-300 text-sm sm:text-base">Nairobi, Kenya</span>
+                    </div>
+                    
+                    {/* Description */}
+                    <p className="text-sm sm:text-base text-gray-400 max-w-lg leading-relaxed px-4">
+                        I create exceptional digital experiences by blending eye-catching <span className="text-blue-400 font-semibold">frontend design</span> with powerful <span className="text-purple-400 font-semibold">backend architecture</span>. Let's team up and build something incredible.
+                    </p>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md px-4">
+                        <Link 
+                            href="/projects" 
+                            className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 focus:outline-none focus:ring-4 focus:ring-blue-500/50 overflow-hidden"
+                        >
+                            <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
+                                View My Work
+                                <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </Link>
+                        
+                        <Link 
+                            href="docs/resume.pdf" 
+                            className="group px-6 py-3 sm:px-8 sm:py-4 border-2 border-gray-600 text-gray-300 font-bold rounded-xl transition-all duration-300 hover:border-blue-400 hover:text-white hover:bg-blue-500/10 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/30"
+                        >
+                            <span className="flex items-center justify-center text-sm sm:text-base">
+                                <FaDownload className="mr-2 group-hover:animate-bounce" />
+                                Download CV
+                            </span>
+                        </Link>
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="flex justify-center space-x-4 sm:space-x-6">
+                        <Link 
+                            href="https://github.com/wangaevans"
+                            className="group p-2.5 sm:p-3 rounded-full bg-gray-800/50 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+                        >
+                            <FaGithub className="text-lg sm:text-xl text-gray-400 group-hover:text-white transition-colors duration-300" />
+                        </Link>
+                        <Link 
+                            href="https://twitter.com/wangaonly"
+                            className="group p-2.5 sm:p-3 rounded-full bg-gray-800/50 border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+                        >
+                            <FaTwitter className="text-lg sm:text-xl text-gray-400 group-hover:text-blue-400 transition-colors duration-300" />
+                        </Link>
+                        <Link 
+                            href="https://wa.me/+254706344456"
+                            className="group p-2.5 sm:p-3 rounded-full bg-gray-800/50 border border-gray-700 hover:border-green-400 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+                        >
+                            <FaWhatsapp className="text-lg sm:text-xl text-gray-400 group-hover:text-green-400 transition-colors duration-300" />
+                        </Link>
+                    </div>
+
+                    {/* Tech Stack for Mobile - Compact version */}
+                    <div className="w-full max-w-sm">
+                        <h3 className="text-center text-lg font-bold text-white mb-4">
+                            Tech Stack
+                        </h3>
+                        <div className="grid grid-cols-3 gap-2 mb-6">
+                            {config.skills.slice(0, 6).map((skill, index) => (
+                                <div 
+                                    key={index}
+                                    className="group relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 hover:from-blue-600/20 hover:to-purple-600/20 rounded-lg p-2 sm:p-3 text-center transition-all duration-300 hover:scale-105 border border-gray-700/50 hover:border-blue-500/50 backdrop-blur-sm"
+                                    style={{ 
+                                        animationDelay: `${index * 100}ms`,
+                                        animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
+                                    }}
+                                >
+                                    <span className="text-xs font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
+                                        {skill.name}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
                 {/* Scroll Indicator */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div className="hidden lg:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
                     <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
                         <div className="w-1 h-3 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full mt-2 animate-pulse" />
                     </div>

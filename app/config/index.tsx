@@ -12,11 +12,11 @@ export default {
     ],
 
     skills:[
-        { name: "React.js/Next.js" },
+        { name: "React.js" },
+        { name: "Nest.js" },
         { name: "Tailwindcss" },
         { name: "Express" },
-        { name: "MongoDB" },
-        { name: "MySQL" },
-        { name: "Vue" },
+        { name: "Postgres" },
+        { name: "Prisma" },
     ],
 }
