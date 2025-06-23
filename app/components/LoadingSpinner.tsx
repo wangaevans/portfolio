@@ -1,7 +1,12 @@
-import React from 'react';
-
-type SpinnerSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-type SpinnerColor = 'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'gray' | 'white';
+type SpinnerSize = "xs" | "sm" | "md" | "lg" | "xl";
+type SpinnerColor =
+  | "blue"
+  | "green"
+  | "red"
+  | "yellow"
+  | "purple"
+  | "gray"
+  | "white";
 
 interface SpinnerProps {
   size?: SpinnerSize;
@@ -11,41 +16,43 @@ interface SpinnerProps {
 }
 
 const LoadingSpinner: React.FC<SpinnerProps> = ({
-  size = 'md',
-  color = 'blue',
-  className = '',
-  text = ''
+  size = "md",
+  color = "blue",
+  className = "",
+  text = "",
 }) => {
   const sizeClasses: Record<SpinnerSize, string> = {
-    xs: 'w-3 h-3',
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
+    xs: "w-3 h-3",
+    sm: "w-4 h-4",
+    md: "w-6 h-6",
+    lg: "w-8 h-8",
+    xl: "w-12 h-12",
   };
 
   const colorClasses: Record<SpinnerColor, string> = {
-    blue: 'text-blue-600',
-    green: 'text-green-600',
-    red: 'text-red-600',
-    yellow: 'text-yellow-600',
-    purple: 'text-purple-600',
-    gray: 'text-gray-600',
-    white: 'text-white'
+    blue: "text-blue-600",
+    green: "text-green-600",
+    red: "text-red-600",
+    yellow: "text-yellow-600",
+    purple: "text-purple-600",
+    gray: "text-gray-600",
+    white: "text-white",
   };
 
   const textSizeClasses: Record<SpinnerSize, string> = {
-    xs: 'text-xs',
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl'
+    xs: "text-xs",
+    sm: "text-sm",
+    md: "text-base",
+    lg: "text-lg",
+    xl: "text-xl",
   };
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
       <div className="flex items-center space-x-2">
-        <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
+        <div
+          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}
+        >
           <svg
             fill="none"
             viewBox="0 0 24 24"
@@ -68,7 +75,9 @@ const LoadingSpinner: React.FC<SpinnerProps> = ({
           </svg>
         </div>
         {text && (
-          <span className={`${textSizeClasses[size]} ${colorClasses[color]} font-medium`}>
+          <span
+            className={`${textSizeClasses[size]} ${colorClasses[color]} font-medium`}
+          >
             {text}
           </span>
         )}
@@ -85,41 +94,41 @@ interface DotSpinnerProps {
 }
 
 export const DotSpinner: React.FC<DotSpinnerProps> = ({
-  size = 'md',
-  color = 'blue',
-  className = ''
+  size = "md",
+  color = "blue",
+  className = "",
 }) => {
   const dotSizeClasses: Record<SpinnerSize, string> = {
-    xs: 'w-1 h-1',
-    sm: 'w-1.5 h-1.5',
-    md: 'w-2 h-2',
-    lg: 'w-3 h-3',
-    xl: 'w-4 h-4'
+    xs: "w-1 h-1",
+    sm: "w-1.5 h-1.5",
+    md: "w-2 h-2",
+    lg: "w-3 h-3",
+    xl: "w-4 h-4",
   };
 
   const colorClasses: Record<SpinnerColor, string> = {
-    blue: 'bg-blue-600',
-    green: 'bg-green-600',
-    red: 'bg-red-600',
-    yellow: 'bg-yellow-600',
-    purple: 'bg-purple-600',
-    gray: 'bg-gray-600',
-    white: 'bg-white'
+    blue: "bg-blue-600",
+    green: "bg-green-600",
+    red: "bg-red-600",
+    yellow: "bg-yellow-600",
+    purple: "bg-purple-600",
+    gray: "bg-gray-600",
+    white: "bg-white",
   };
 
   return (
     <div className={`flex space-x-1 ${className}`}>
       <div
         className={`${dotSizeClasses[size]} ${colorClasses[color]} rounded-full animate-bounce`}
-        style={{ animationDelay: '0ms' }}
+        style={{ animationDelay: "0ms" }}
       />
       <div
         className={`${dotSizeClasses[size]} ${colorClasses[color]} rounded-full animate-bounce`}
-        style={{ animationDelay: '150ms' }}
+        style={{ animationDelay: "150ms" }}
       />
       <div
         className={`${dotSizeClasses[size]} ${colorClasses[color]} rounded-full animate-bounce`}
-        style={{ animationDelay: '300ms' }}
+        style={{ animationDelay: "300ms" }}
       />
     </div>
   );
@@ -127,26 +136,26 @@ export const DotSpinner: React.FC<DotSpinnerProps> = ({
 
 // Pulse spinner
 export const PulseSpinner: React.FC<DotSpinnerProps> = ({
-  size = 'md',
-  color = 'blue',
-  className = ''
+  size = "md",
+  color = "blue",
+  className = "",
 }) => {
   const sizeClasses: Record<SpinnerSize, string> = {
-    xs: 'w-3 h-3',
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
+    xs: "w-3 h-3",
+    sm: "w-4 h-4",
+    md: "w-6 h-6",
+    lg: "w-8 h-8",
+    xl: "w-12 h-12",
   };
 
   const colorClasses: Record<SpinnerColor, string> = {
-    blue: 'bg-blue-600',
-    green: 'bg-green-600',
-    red: 'bg-red-600',
-    yellow: 'bg-yellow-600',
-    purple: 'bg-purple-600',
-    gray: 'bg-gray-600',
-    white: 'bg-white'
+    blue: "bg-blue-600",
+    green: "bg-green-600",
+    red: "bg-red-600",
+    yellow: "bg-yellow-600",
+    purple: "bg-purple-600",
+    gray: "bg-gray-600",
+    white: "bg-white",
   };
 
   return (
